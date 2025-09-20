@@ -35,14 +35,56 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
 
+    .profile-wrapper {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 15px;
+    }
+
+    .wave-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.4);
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 3px solid #dadada;
+      animation: wave 2s infinite ease-out;
+      z-index: 0;
+    }
+
+    .wave-circle:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+
+    .wave-circle:nth-child(3) {
+      animation-delay: 1s;
+    }
+
+    @keyframes wave {
+      0% {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(0.2);
+        opacity: 0;
+      }
+    }
+
     .profile-img {
       width: 120px;
       height: 120px;
-      border-radius: 50%; /* Fixed border radius for perfect circle */
+      border-radius: 50%;
       object-fit: cover;
       border: 4px solid #ddd;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
+      z-index: 1;
     }
 
     .name {
@@ -111,7 +153,12 @@
 <body>
   <main class="container">
     <section class="card">
-      <img class="profile-img" src="https://www.upwork.com/profile-portraits/c1ecFARuud7xrgw5tk8ooMwwvhTJCybijUtryxGY4zj8gQf6iBKGooiMAmKEwZ8jfN" alt="Profile Picture">
+      <div class="profile-wrapper">
+        <span class="wave-circle"></span>
+        <span class="wave-circle"></span>
+        <span class="wave-circle"></span>
+        <img class="profile-img" src="https://www.upwork.com/profile-portraits/c1ecFARuud7xrgw5tk8ooMwwvhTJCybijUtryxGY4zj8gQf6iBKGooiMAmKEwZ8jfN" alt="Profile Picture">
+      </div>
 
       <h1 class="name">Khadijah B.</h1>
       <p class="tagline">Shopify Expert | Shopify Designer | Shopify Developer</p>
