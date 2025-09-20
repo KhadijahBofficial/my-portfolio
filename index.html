@@ -12,9 +12,8 @@
       box-sizing: border-box;
     }
 
-    /* Container setup */
     body {
-      font-family: Poppins;
+      font-family: Poppins, sans-serif;
       background: linear-gradient(to bottom, #f5f5f5, #eaeaea);
       display: flex;
       align-items: center;
@@ -36,19 +35,11 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     }
 
-    img.profile-img {
+    .profile-img {
       width: 120px;
       height: 120px;
-      border-radius: 50%;
-      border: 4px solid #ddd;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 15px;
-   }
-
-    profile-img{
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+      border-radius: 50%; /* Fixed border radius for perfect circle */
+      object-fit: cover;
       border: 4px solid #ddd;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       margin-bottom: 15px;
@@ -120,19 +111,19 @@
 <body>
   <main class="container">
     <section class="card">
-      <img class="profile-img" src="https://www.upwork.com/profile-portraits/c1ecFARuud7xrgw5tk8ooMwwvhTJCybijUtryxGY4zj8gQf6iBKGooiMAmKEwZ8jfN">
+      <img class="profile-img" src="https://www.upwork.com/profile-portraits/c1ecFARuud7xrgw5tk8ooMwwvhTJCybijUtryxGY4zj8gQf6iBKGooiMAmKEwZ8jfN" alt="Profile Picture">
 
       <h1 class="name">Khadijah B.</h1>
       <p class="tagline">Shopify Expert | Shopify Designer | Shopify Developer</p>
 
       <div class="social-links">
-        <a href="#" aria-label="Twitter">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Twitter">
+        <a href="https://instagram.com" aria-label="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
         </a>
-        <a href="#" aria-label="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/upwork.svg" alt="LinkedIn">
+        <a href="https://www.upwork.com/freelancers/khadijahb4" aria-label="Upwork">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/upwork.svg" alt="Upwork">
         </a>
-        <a href="#" aria-label="GitHub">
+        <a href="https://github.com/KhadijahBofficial" aria-label="GitHub">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
         </a>
       </div>
